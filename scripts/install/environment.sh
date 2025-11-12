@@ -48,10 +48,10 @@ readonly MONGO_USERNAME=${MONGO_USERNAME:-iam} # MongoDB 用户名
 readonly MONGO_PASSWORD=${MONGO_PASSWORD:-${PASSWORD}} # MongoDB 密码
 
 # iam 配置
-readonly IAM_DATA_DIR=${IAM_DATA_DIR:-/data/iam} # iam 各组件数据目录
-readonly IAM_INSTALL_DIR=${IAM_INSTALL_DIR:-/opt/iam} # iam 安装文件存放目录
-readonly IAM_CONFIG_DIR=${IAM_CONFIG_DIR:-/etc/iam} # iam 配置文件存放目录
-readonly IAM_LOG_DIR=${IAM_LOG_DIR:-/var/log/iam} # iam 日志文件存放目录
+readonly IAM_DATA_DIR=${IAM_DATA_DIR:-~/iam/data/iam} # iam 各组件数据目录
+readonly IAM_INSTALL_DIR=${IAM_INSTALL_DIR:-~/iam/opt/iam} # iam 安装文件存放目录
+readonly IAM_CONFIG_DIR=${IAM_CONFIG_DIR:-~/iam/etc/iam} # iam 配置文件存放目录
+readonly IAM_LOG_DIR=${IAM_LOG_DIR:-~/iam/var/log/iam} # iam 日志文件存放目录
 readonly CA_FILE=${CA_FILE:-${IAM_CONFIG_DIR}/cert/ca.pem} # CA
 
 # iam-apiserver 配置

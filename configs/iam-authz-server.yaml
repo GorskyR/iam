@@ -56,8 +56,8 @@ log:
     enable-color: true # 是否开启颜色输出，true:是，false:否
     disable-caller: false # 是否开启 caller，如果开启会在日志中显示调用日志所在的文件、函数和行号
     disable-stacktrace: false # 是否再panic及以上级别禁止打印堆栈信息
-    output-paths: ~/log/iam/iam-authz-server.log,stdout  # ${IAM_LOG_DIR}/iam-authz-server # 多个输出，逗号分开。stdout：标准输出，
-    error-output-paths: ~/log/iam/iam-authz-server.error.log  # ${IAM_LOG_DIR}/iam-authz-server # zap内部(非业务)错误日志输出路径，多个输出，逗号分开
+    output-paths: ~/iam/log/iam/iam-authz-server.log,stdout  # ${IAM_LOG_DIR}/iam-authz-server # 多个输出，逗号分开。stdout：标准输出，
+    error-output-paths: ~/iam/log/iam/iam-authz-server.error.log  # ${IAM_LOG_DIR}/iam-authz-server # zap内部(非业务)错误日志输出路径，多个输出，逗号分开
 
 analytics:
     enable: true # 设置为 true 后 iam-authz-server 会记录授权审计日志
