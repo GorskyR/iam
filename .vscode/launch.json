@@ -11,7 +11,7 @@
             "mode": "auto",
             "program": "${fileDirname}",
             "console": "integratedTerminal",
-            "args": ["-c", "../../configs/iam-apiserver.yaml"]
+            "args": []
         },
         {
             "name": "iam-apiserver",
@@ -20,16 +20,22 @@
             "mode": "auto",
             "program": "${workspaceFolder}/cmd/iam-apiserver",
             "console": "integratedTerminal",
-            "args": ["-c", "../../configs/iam-apiserver.yaml"]
+            "args": [
+                "-c",
+                "../../configs/iam-apiserver.yaml"
+            ]
         },
         {
             "name": "iamctl",
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "${workspaceFolder}/cmd/iamctl.go",
+            "program": "${workspaceFolder}/cmd/iamctl",
             "console": "integratedTerminal",
-            "args": ["-c", "../../configs/iamctl.yaml"]
+            "args": [
+                // "-c",
+                // "../../configs/iamctl.yaml"
+            ]
         }
     ]
 }

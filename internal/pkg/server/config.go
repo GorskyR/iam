@@ -131,6 +131,7 @@ func LoadConfig(cfg string, defaultName string) {
 		viper.AddConfigPath(".")
 		viper.AddConfigPath(filepath.Join(homedir.HomeDir(), RecommendedHomeDir))
 		viper.AddConfigPath("/etc/iam")
+		viper.AddConfigPath("/home/glory/code/github/iam/configs")
 		viper.SetConfigName(defaultName)
 	}
 
