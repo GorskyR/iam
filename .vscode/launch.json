@@ -26,6 +26,18 @@
             ]
         },
         {
+            "name": "iam-authz-server",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cmd/iam-authz-server",
+            "console": "integratedTerminal",
+            "args": [
+                "-c",
+                "../../configs/iam-authz-server.yaml"
+            ]
+        },
+        {
             "name": "iamctl",
             "type": "go",
             "request": "launch",
