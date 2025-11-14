@@ -8,7 +8,7 @@
 rpcserver: localhost:8081  # ${IAM_AUTHZ_SERVER_RPCSERVER} # iam-apiserver grpc 服务器地址和端口
 
 # TLS客户端证书文件
-client-ca-file: ${IAM_AUTHZ_SERVER_CLIENT_CA_FILE} # TLS 客户端证书，如果指定，则该客户端证书将被用于认证
+client-ca-file: /home/glory/iam/etc/iam/cert/ca.pem # TLS 客户端证书，如果指定，则该客户端证书将被用于认证
 
 # RESTful 服务配置
 server:
@@ -29,8 +29,8 @@ secure:
         #cert-dir: .iam/cert # TLS 证书所在的目录，默认值为 /var/run/iam
         #pair-name: iam # TLS 私钥对名称，默认 iam
         cert-key:
-            cert-file: ${IAM_AUTHZ_SERVER_SECURE_TLS_CERT_KEY_CERT_FILE} # 包含 x509 证书的文件路径，用 HTTPS 认证
-            private-key-file: ${IAM_AUTHZ_SERVER_SECURE_TLS_CERT_KEY_PRIVATE_KEY_FILE} # TLS 私钥
+            cert-file: /home/glory/iam/etc/iam/cert/iam-authz-server.pem # 包含 x509 证书的文件路径，用 HTTPS 认证
+            private-key-file: /home/glory/iam/etc/iam/cert/iam-authz-server-key.pem # TLS 私钥
 
 # Redis 配置
 redis:
@@ -56,8 +56,8 @@ log:
     enable-color: true # 是否开启颜色输出，true:是，false:否
     disable-caller: false # 是否开启 caller，如果开启会在日志中显示调用日志所在的文件、函数和行号
     disable-stacktrace: false # 是否再panic及以上级别禁止打印堆栈信息
-    output-paths: ~/iam/log/iam/iam-authz-server.log,stdout  # ${IAM_LOG_DIR}/iam-authz-server # 多个输出，逗号分开。stdout：标准输出，
-    error-output-paths: ~/iam/log/iam/iam-authz-server.error.log  # ${IAM_LOG_DIR}/iam-authz-server # zap内部(非业务)错误日志输出路径，多个输出，逗号分开
+    output-paths: /home/glory/iam/log/iam/iam-authz-server.log,stdout  # ${IAM_LOG_DIR}/iam-authz-server # 多个输出，逗号分开。stdout：标准输出，
+    error-output-paths: /home/glory/iam/log/iam/iam-authz-server.error.log  # ${IAM_LOG_DIR}/iam-authz-server # zap内部(非业务)错误日志输出路径，多个输出，逗号分开
 
 analytics:
     enable: true # 设置为 true 后 iam-authz-server 会记录授权审计日志
