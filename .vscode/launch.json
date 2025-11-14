@@ -48,6 +48,18 @@
                 // "-c",
                 // "../../configs/iamctl.yaml"
             ]
-        }
+        },
+        {
+            "name": "iam-pump",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cmd/iam-pump",
+            "console": "integratedTerminal",
+            "args": [
+                "-c",
+                "../../configs/iam-pump.yaml"
+            ]
+        },
     ]
 }
